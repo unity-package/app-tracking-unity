@@ -24,23 +24,27 @@
 
 ### Add the line below to `Packages/manifest.json`
 
-for version `1.0.3`
+for version `1.0.4`
+
 ```csharp
-"com.wolf-org.tracking":"https://github.com/unity-package/app-tracking-unity.git#1.0.3",
+"com.wolf-org.tracking":"https://github.com/unity-package/app-tracking-unity.git#1.0.4",
 ```
 
 ## Use
 
 #### Firebase Tracking
 
-- Add define symbols `VIRTUESKY_FIREBASE_ANALYTIC` to use ([Get Firebase Analytic Sdk](https://github.com/firebase-unity/firebase-analytics))
+- Add define symbols `VIRTUESKY_FIREBASE_ANALYTIC` to
+  use ([Get Firebase Analytic Sdk](https://github.com/firebase-unity/firebase-analytics))
 - Tracking event
+
 ```csharp
     static void TrackEvent(string eventName)
     static void TrackEvent(string eventName, string parameterName, string parameterValue)
     static void TrackEvent(string eventName, Dictionary<string, string> dictParameters)
     static void TrackEvent(string eventName, Parameter[] parameters)
 ```
+
 Example
 
 ```csharp
@@ -84,6 +88,7 @@ Example
 ```csharp
     static void FirebaseAnalyticTrackRevenue(double value, string network, string unitId, string format, string adNetwork)
 ```
+
 Example
 
 ```csharp
@@ -103,6 +108,7 @@ Example
 ```
 
 Example
+
 ```csharp
         void TrackingEventAdjust()
         {
@@ -111,9 +117,11 @@ Example
 ```
 
 - Tracking ads revenue
+
 ```csharp
     static void AdjustTrackRevenue(double value, string network, string unitId, string placement, string adNetwork)
 ```
+
 Example
 
 ```csharp
@@ -125,7 +133,8 @@ Example
 
 #### AppsFlyer Tracking
 
-- Add define symbol `VIRTUESKY_APPSFLYER` to use ([Get Appsflyer Sdk](https://github.com/AppsFlyerSDK/appsflyer-unity-plugin) , [Get AppsFlyer AdRevenue](https://github.com/AppsFlyerSDK/appsflyer-unity-adrevenue-generic-connector))
+- Add define symbol `VIRTUESKY_APPSFLYER` to
+  use ([Get Appsflyer Sdk](https://github.com/AppsFlyerSDK/appsflyer-unity-plugin) , [Get AppsFlyer AdRevenue](https://github.com/AppsFlyerSDK/appsflyer-unity-adrevenue-generic-connector))
 - Tracking event
 
 ```csharp
@@ -160,6 +169,7 @@ Example
             AppsFlyerTracking.TrackEvent("WinGame", dict);
         }
 ```
+
 - Tracking ads revenue
 
 ```csharp
@@ -174,22 +184,28 @@ Example
             AppsFlyerTrackingRevenue.AppsFlyerTrackRevenueAd(...);
         }
 ```
+
 - Tracking iap revenue
-Add define symbol `VIRTUESKY_IAP` to use
+  Add define symbol `VIRTUESKY_IAP` to use
+
 ```csharp
     static void AppFlyerTrackingRevenueInAppPurchase(Product product)
 ```
 
 Example
+
 ```csharp
         void TrackingRevenue(Product productIAP)
         {
             AppsFlyerTrackingRevenue.AppFlyerTrackingRevenueInAppPurchase(productIAP);
         }
 ```
+
 #### App Tracking
 
-- Tracking ad revenue (If calling `Track Revenue` through `App Tracking`, revenue will be tracked in all of Firebase Analytics, Adjust, and AppsFlyer)
+- Tracking ad revenue (If calling `Track Revenue` through `App Tracking`, revenue will be tracked in all of Firebase
+  Analytics, Adjust, and AppsFlyer)
+
 ```csharp
     static void TrackRevenue(double value, string network, string unitId, string format, string adNetwork)
 ```
@@ -203,7 +219,7 @@ Example
         }
 ```
 
-- Firebase tracking ATT Results IOS (App Tracking Transparency) 
+- Firebase tracking ATT Results IOS (App Tracking Transparency)
 - Require: `"com.unity.ads.ios-support": "1.2.0"`
 
 ```csharp
