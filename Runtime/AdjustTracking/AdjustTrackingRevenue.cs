@@ -19,7 +19,7 @@ namespace VirtueSky.Tracking
                 case "max":
                     source = "applovin_max_sdk";
                     break;
-                case "ironsource":
+                case "levelplay":
                     source = "levelplay_ironsource_sdk";
                     break;
             }
