@@ -24,12 +24,11 @@
 
 ### Add the line below to `Packages/manifest.json`
 
-for version `1.0.5`
+for version `1.0.6`
 
 ```csharp
-"com.wolf-org.tracking":"https://github.com/unity-package/app-tracking-unity.git#1.0.5",
+"com.wolf-org.tracking":"https://github.com/unity-package/app-tracking-unity.git#1.0.6",
 ```
-
 ## Use
 
 #### Firebase Tracking
